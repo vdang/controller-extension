@@ -1,9 +1,9 @@
 namespace controller {
-    // % block
+    //% block
     export function is_left_joystick_clicked() {
         return pins.digitalReadPin(DigitalPin.P8) == 0
     }
-    // % block
+    //% block
     export function left_joystick_x () {
         return 2 - Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P1),
@@ -13,7 +13,7 @@ namespace controller {
         4
         ))
     }
-    // % block
+    //% block
     export function left_joystick_y() {
         return 2 - Math.round(pins.map(
             pins.analogReadPin(AnalogPin.P0),
@@ -23,11 +23,11 @@ namespace controller {
             4
         ))
     }
-    // % block
+    //% block
     export function is_right_joystick_clicked() {
         return pins.digitalReadPin(DigitalPin.P9) == 0
     }
-    // % block
+    //% block
     export function right_joystick_x () {
         return 2 - Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P3),
@@ -37,7 +37,7 @@ namespace controller {
         4
         ))
     }
-    // % block
+    //% block
     export function right_joystick_y () {
         return 2 - Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P2),
