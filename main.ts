@@ -1,10 +1,10 @@
 namespace controller {
     //% block
-    export function is_left_joystick_clicked() {
+    export function isLeftJoystickClicked() {
         return pins.digitalReadPin(DigitalPin.P8) == 0
     }
     //% block
-    export function left_joystick_x () {
+    export function leftJoystickX () {
         return 2 - Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P1),
         0,
@@ -14,7 +14,7 @@ namespace controller {
         ))
     }
     //% block
-    export function left_joystick_y() {
+    export function leftJoystickY() {
         return 2 - Math.round(pins.map(
             pins.analogReadPin(AnalogPin.P0),
             0,
@@ -24,11 +24,11 @@ namespace controller {
         ))
     }
     //% block
-    export function is_right_joystick_clicked() {
+    export function isRightJoystickClicked() {
         return pins.digitalReadPin(DigitalPin.P9) == 0
     }
     //% block
-    export function right_joystick_x () {
+    export function rightJoystickX () {
         return 2 - Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P3),
         0,
@@ -38,7 +38,7 @@ namespace controller {
         ))
     }
     //% block
-    export function right_joystick_y () {
+    export function rightJoystickY () {
         return 2 - Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P2),
         0,
