@@ -4,13 +4,13 @@ namespace controller {
         return pins.digitalReadPin(DigitalPin.P8) == 0
     }
     function leftJoystickX () {
-        return 2 - Math.round(pins.map(
+        return Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P1),
         0,
         1023,
         0,
         4
-        ))
+        )) - 2
     }
     //% block
     export function isLeftJoystickMovedLeft() {
@@ -21,13 +21,13 @@ namespace controller {
         return leftJoystickX() > 0
     }
     function leftJoystickY() {
-        return 2 - Math.round(pins.map(
-            pins.analogReadPin(AnalogPin.P0),
-            0,
-            1023,
-            0,
-            4
-        ))
+        return Math.round(pins.map(
+        pins.analogReadPin(AnalogPin.P0),
+        0,
+        1023,
+        0,
+        4
+        )) - 2
     }
     //% block
     export function isLeftJoystickMovedDown() {
@@ -42,13 +42,13 @@ namespace controller {
         return pins.digitalReadPin(DigitalPin.P9) == 0
     }
     function rightJoystickX () {
-        return 2 - Math.round(pins.map(
+        return Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P3),
         0,
         1023,
         0,
         4
-        ))
+        )) - 2
     }
     //% block
     export function isRightJoystickMovedLeft() {
@@ -59,13 +59,13 @@ namespace controller {
         return rightJoystickX() > 0
     }
     function rightJoystickY () {
-        return 2 - Math.round(pins.map(
+        return Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P2),
         0,
         1023,
         0,
         4
-        ))
+        )) - 2
     }
     //% block
     export function isRightJoystickMovedDown() {
