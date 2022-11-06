@@ -14,6 +14,14 @@ namespace controller {
         ))
     }
     //% block
+    export function isLeftJoystickMovedLeft() {
+        return leftJoystickX() == -2
+    }
+    //% block
+    export function isLeftJoystickMovedRight() {
+        return leftJoystickX() == 2
+    }
+    //% block
     export function leftJoystickY() {
         return 2 - Math.round(pins.map(
             pins.analogReadPin(AnalogPin.P0),
@@ -22,6 +30,14 @@ namespace controller {
             0,
             4
         ))
+    }
+    //% block
+    export function isLeftJoystickMovedDown() {
+        return leftJoystickY() == -2
+    }
+    //% block
+    export function isLeftJoystickMovedUp() {
+        return leftJoystickY() == 2
     }
     //% block
     export function isRightJoystickClicked() {
@@ -38,6 +54,14 @@ namespace controller {
         ))
     }
     //% block
+    export function isRightJoystickMovedLeft() {
+        return rightJoystickX() == -2
+    }
+    //% block
+    export function isRightJoystickMovedRight() {
+        return rightJoystickX() == 2
+    }
+    //% block
     export function rightJoystickY () {
         return 2 - Math.round(pins.map(
         pins.analogReadPin(AnalogPin.P2),
@@ -46,6 +70,14 @@ namespace controller {
         0,
         4
         ))
+    }
+    //% block
+    export function isRightJoystickMovedDown() {
+        return rightJoystickY() == -2
+    }
+    //% block
+    export function isRightJoystickMovedUp() {
+        return rightJoystickY() == 2
     }
     pins.setPull(DigitalPin.P8, PinPullMode.PullUp)
     pins.setPull(DigitalPin.P9, PinPullMode.PullUp)
